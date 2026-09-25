@@ -1,22 +1,13 @@
+import dresseur.Entraineur
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+var joueur = Entraineur(1,"Sacha",100)
+var rival = Entraineur(2,"Regis",200)//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
-    println(changeCouleur("Hello","rouge"))
-    println(changeCouleur("World","bleu"))
-    println("Hello ${changeCouleur("my","jaune")} World")
-    println(changeCouleur("Truc","marron"))
-
-
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+    joueur.afficheDetail()
+    rival.afficheDetail()
+    joueur.argents+=50
+    joueur.afficheDetail()
 }
 /**
  * Change la couleur du message donné selon le nom de la couleur spécifié.
