@@ -30,4 +30,4 @@ class Entraineur(
         println("Dresseur : ${this.nom}")
         println("Argents: ${this.argents} ")
     }
-}
+}0.
