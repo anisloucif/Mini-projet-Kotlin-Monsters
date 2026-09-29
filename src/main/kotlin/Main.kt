@@ -58,10 +58,6 @@ val especeGalum = EspeceMonstre(
 var rival = Entraineur(2,"Regis",200)//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    joueur.afficheDetail()
-    rival.afficheDetail()
-    joueur.argents+=50
-    joueur.afficheDetail()
 }
 /**
  * Change la couleur du message donné selon le nom de la couleur spécifié.
