@@ -1,5 +1,6 @@
 import dresseur.Entraineur
 import monstre.EspeceMonstre
+import monde.Zone
 
 var joueur = Entraineur(1,"Sacha",100)
 val especeSpringLeaf = EspeceMonstre(
@@ -55,9 +56,22 @@ val especeGalum = EspeceMonstre(
     "Peut rester immobile des heures comme une statue.",
     "Sérieux, stoïque, fiable"
 )
+
+val route1 = Zone(
+    1, "Route 1", 100,
+    mutableListOf(especeLaoumi, especeBugsyface)
+)
+
+val route2 = Zone(
+    2, "Route 2", 150,
+    mutableListOf(especeBugsyface, especeGalum)
+)
+
 var rival = Entraineur(2,"Regis",200)//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
+    route1.zoneSuivante = route2
+    route2.zonePrecedente = route1
 }
 /**
  * Change la couleur du message donné selon le nom de la couleur spécifié.
